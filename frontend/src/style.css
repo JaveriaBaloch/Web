@@ -1,0 +1,1036 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100;300;400;500&display=swap");
+/* Common CSS for Common Elements  Start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.dropdown-menu{
+  position: relative;
+  top: 10%;
+  z-index: 12;
+  background: black;
+  overflow: hidden;
+  width: 12rem;
+}
+.dropdown-menu .dropdown-item{
+  margin: 1rem;
+  color: white;
+}
+.dropdown-menu .dropdown-item:hover{
+  margin: 1rem;
+  color: orange;
+  background: rgb(35, 20, 1);
+}
+.black .dropdown-menu{
+    position: relative;
+    top: 10%;
+    z-index: 12;
+    background: black;
+    overflow: hidden;
+    width: 12rem;
+  }
+.black .dropdown-menu .dropdown-item{
+    margin: 1rem;
+    color: white;
+  }
+.black .dropdown-menu .dropdown-item:hover{
+    margin: 1rem;
+    color: orange;
+    background: rgb(35, 20, 1);
+  }
+
+
+h1, h3 {
+  font-family: "Permanent Marker", cursive;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+hr {
+  width: 4rem;
+  height: 7px;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.col-4 {
+  width: 40%;
+}
+
+.card {
+  box-shadow: 0 0 5px gray;
+  padding: 1rem;
+}
+
+.card-body {
+  padding: 0rem;
+}
+
+.hero-text {
+  margin: 2rem 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: linear-gradient(to left, #e16106 30%, #ffc400, #e16906 70%);
+  padding: 10px 3rem;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1rem;
+  color: #ffff;
+  border-radius: 2rem;
+  transition: all 1s;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.d-flex{
+  perspective: 100%;
+  transition: 1s;
+}
+#update{
+  height: fit-content;
+  transform: rotateY(90deg) translateX(10%);
+  transition: 1s;
+}
+#profile{
+  transition: 1s;
+}
+.bg-black{
+  background: black;
+}
+button a {
+  text-decoration: none;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1rem;
+  color: #ffff;
+}
+button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0), #fff);
+  transform: translateX(-100%) translateY(-20%) rotate(-5deg);
+  transition: all 1s;
+}
+button:hover {
+  transform: rotate(-5deg);
+}
+button:hover::before {
+  transform: translateX(100%);
+}
+/* Navbar CSS Start*/
+main {
+  background: url("./IMG/homePage pics/main.png");
+  background-size: cover;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: #ffff;
+  position: relative;
+  padding-bottom: 4rem;
+}
+main nav {
+  margin: 0 2rem;
+  font-family: "Permanent Marker", cursive;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+main nav .navbrand {
+  width: fit-content;
+}
+main nav .navbrand .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-left: 0;
+}
+main nav .navbar {
+  width: 900px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(0%);
+}
+main nav .navbar .fa-xmark {
+  font-size: 0;
+}
+.fa-bars{
+  font-size: 0
+}
+main nav .navbar li {
+  margin: auto 1rem;
+}
+main nav .navbar a {
+  display: block;
+  align-items: center;
+  text-decoration: none;
+  color: #ffff;
+  transition: all 0.4s;
+}
+main nav .navbar a:hover {
+  color: yellow;
+  font-size: 1.5rem;
+}
+main nav .navbar .active {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+main .row .theme-switch {
+  display: flex;
+  align-items: center;
+}
+main .row .theme-switch input {
+  cursor: pointer;
+}
+main .row .theme-switch input[type=checkbox]:checked {
+  background: yellow;
+}
+main .row .theme-switch input[type=checkbox]:checked::before {
+  transform: translate(100%);
+}
+main .row .theme-switch input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 15px;
+  background-color: #eee;
+  outline: none;
+  border-radius: 20px;
+  margin: 0 8px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: all 1s;
+}
+main .row .theme-switch input[type=checkbox]::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  background: linear-gradient(to left, #e19406, #ffe100, #e17006);
+  position: absolute;
+  top: -1.6px;
+  left: -1.6px;
+  border-radius: 50%;
+  transition: all 1s;
+}
+main .row h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-align: left;
+}
+main .row p {
+  font-family: "Roboto", sans-serif;
+  width: 400px;
+  margin-bottom: 2rem;
+}
+main .row img {
+  width: 500px;
+}
+/* Navbar CSS Ends*/
+
+/* Home CSS Start*/
+/* Services CSS Start*/
+.services hr {
+  background: black;
+}
+.services .animate-surface {
+  margin: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .card-body {
+  color: black;
+  margin: 1rem auto;
+  width: 17rem;
+  position: relative;
+  display: flex ;
+  justify-content: center;
+  text-align: center;
+}
+.services .card-body .card-front {
+  perspective: 50%;
+  border-radius: none !important;
+  border: lightgrey 1px solid;
+  width: 17rem;
+  box-shadow: none !important;
+  background: #ffff;
+  display: flex;
+  flex-direction: column;
+  transition: all 2s;
+}
+.services .card-body .card-front img {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+}
+.services .card-body .card-back {
+  color: black;
+  border-radius: none !important;
+  border: lightgrey 1px solid;
+  box-shadow: none !important;
+  background: #ffff;
+  transform-origin: right;
+  transform: rotateY(90deg) translateX(10%) translateZ(1rem);
+  transition: all 2s;
+  position: absolute;
+  width: 17rem;
+  top: 0;
+  
+  left: 5%;
+  height: 100%;
+  /* width: ; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.services .card-body .card-back p{
+  padding: 20px;
+}
+.services .card-body:hover .card-front {
+  transform-origin: right;
+  transform: rotateY(-90deg) translateX(-100%);
+}
+.services .card-body:hover .card-front:nth-child(2) {
+  transform-origin: right;
+  transform: rotateY(-90deg) translateX(-50%);
+}
+.services .card-body:hover .card-back {
+  transform-origin: left;
+  transform: rotateY(0deg);
+}
+/* Services CSS End*/
+
+/* Skills CSS Start*/
+.skills {
+  background: url("./IMG/homePage pics/Asset 8.svg");
+  background-size: cover;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: #ffff;
+  position: relative;
+  padding-bottom: 0rem;
+}
+.skills .container {
+  padding-top: 8rem;
+}
+.skills .container .skill-img {
+  height: 400px;
+  width: 400px;
+}
+.skills .container .skill-list {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: orange;
+}
+.skills .container .skill-list .skill {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.7rem auto;
+  width: 100%;
+}
+.skills .container .skill-list .skill .progressBar {
+  width: 25rem;
+  height: 15px;
+  background: #fff;
+  margin: 0 0.7rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 17px gray;
+  border-radius: 1rem;
+}
+.skills .container .skill-list .skill .progressBar .progress {
+  background: linear-gradient(to left, #e19406, #ffe100, #e17006);
+  height: 15px;
+}
+.skills .container hr {
+  background: #ffff;
+}
+
+.ending-svg {
+  background: url("./IMG/homePage pics/Asset 11.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: #ffff;
+  position: relative;
+  height: 8rem;
+}
+/* Skills CSS End*/
+
+/* Contact Us CSS starts */
+.contact-Us {
+  margin: 1rem;
+  margin-bottom: 0rem;
+}
+.contact-Us hr {
+  background: black;
+}
+.contact-Us .card {
+  overflow: hidden;
+  padding: 0rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  width: fit-content;
+  justify-content: space-around;
+  height: 100%;
+  background: url("./IMG/homePage pics/bg.jpeg");
+}
+.contact-Us .card .row {
+  height: 100%;
+}
+.contact-Us .card .point-of-access {
+  width: 35%;
+  color: #fff;
+  padding: 4rem;
+}
+.contact-Us .card .point-of-access ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  list-style: none;
+  align-self: center;
+}
+.contact-Us .card .point-of-access ul li {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  margin: 1rem 0;
+}
+.contact-Us .card .point-of-access ul li p {
+  margin-left: 1rem;
+}
+.contact-Us .card form {
+  background: #fff;
+  width: 65%;
+  padding: 1.6rem;
+}
+.contact-Us .card form input, .contact-Us .card form textarea {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding: 8px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+  box-shadow: inset 0 0 3px gray;
+}
+.contact-Us .card form button {
+  width: 100%;
+}
+.contact-Us .card form button::before {
+  transform: translateX(-100%) translateY(-20%) rotate(0deg);
+}
+.contact-Us .card form button:hover {
+  transform: rotate(0deg);
+}
+.contact-Us .card form button:hover::before {
+  transform: translateX(100%);
+}
+/* Contact Us CSS End */
+/* HomePage CSS End */
+/* Team Page CSS Starts */
+.team .team-members {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.team .team-members .mx {
+  margin: 0 3rem;
+}
+.team .team-members .card {
+  width: 18rem;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+  align-self: center;
+  text-align: center;
+  background: repeating-linear-gradient(45deg, #fff48d 25%, #a9d8fe 50%);
+}
+.team .team-members .card h2 {
+  font-family: "Permanent Marker", cursive;
+  margin: 0.5rem;
+}
+.team .team-members .card small {
+  color: gray;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  margin: 0.5rem;
+}
+.team .team-members .card p {
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+  text-align: center;
+  color: #464444;
+  width: 80%;
+}
+.team .team-members .card img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  margin-top: -75px;
+}
+/* Team Page CSS End */
+/* Footer CSS Start */
+footer {
+  background: url("./IMG/homePage pics/Asset 10.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffff;
+  position: relative;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+
+}
+footer p {
+  margin: 0rem auto;
+}
+/* Footer CSS End */
+
+/* Calculator Page CSS Starts */
+.calculator {
+  padding-top: 1rem;
+}
+.calculator hr {
+  background: white;
+}
+.calculator .card {
+  overflow: hidden;
+  padding: 0rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  width: 70vw;
+  justify-content: space-around;
+  height: 100%;
+  background: url("./IMG/homePage pics/bg.jpeg");
+}
+.calculator .card .row {
+  height: 100%;
+  flex-direction: column;
+}
+.calculator .card .point-of-access {
+  width: 100%;
+  color: #fff;
+  padding: 4rem;
+}
+.calculator .card form {
+  background: #fff;
+  width: 100%;
+  padding: 1.6rem;
+}
+.calculator .card form .service-selection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  width: 90%;
+}
+.calculator .card form .service-selection .type-of-project {
+  display: flex;
+  align-self: center;
+  width: 200px;
+}
+.calculator .card form .service-selection .type-of-project input {
+  font-size: 1rem;
+  width: 15px;
+  font-family: "Roboto", sans-serif;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: none;
+}
+.calculator .card form .service-selection .type-of-project label {
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  font-family: "Roboto", sans-serif;
+}
+.calculator .card form .d-flex {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+.calculator .card form .d-flex input[type=range] {
+  box-shadow: inset gray 0 0 4px;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  height: 8px;
+  background: ghostwhite;
+  border-radius: 0.57rem;
+}
+.calculator .card form .d-flex input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+}
+.calculator .card form .d-flex input[type=checkbox] {
+  box-shadow: none;
+  width: 20px;
+}
+.calculator .card form input, .calculator .card form textarea {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  padding: 8px;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+  box-shadow: inset 0 0 3px gray;
+}
+.calculator .card form button {
+  width: 100%;
+}
+.calculator .card form button::before {
+  transform: translateX(-100%) translateY(-20%) rotate(0deg);
+}
+.calculator .card form button:hover {
+  transform: rotate(0deg);
+}
+.calculator .card form button:hover::before {
+  transform: translateX(100%);
+}
+.calculator .card form .total {
+  margin-top: 1rem;
+  text-align: right;
+}
+/* Calculator CSS End */
+
+/* Footer CSS Start */
+footer {
+  background: url("./IMG/homePage pics/Asset 10.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: #ffff;
+  position: relative;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+footer p {
+  margin: 0 auto;
+}
+/* Footer CSS End */
+
+@media only screen and (max-width: 1093px) {
+  main .hero-text img {
+    width: 300px;
+  }
+
+  .skills .container {
+    padding-top: 5rem;
+  }
+  .skills .container .skill-img {
+    height: 300px;
+    width: 300px;
+  }
+  .skills .container .row {
+    align-items: center;
+    margin: 0 auto;
+  }
+  .skills .container .skill-list {
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: orange;
+  }
+  .skills .container .skill-list .skill {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.7rem auto;
+    width: 100%;
+  }
+  .skills .container .skill-list .skill .progressBar {
+    width: 20rem;
+    height: 12px;
+    background: #fff;
+    margin: 0 0.7rem;
+    overflow: hidden;
+    box-shadow: inset 0 0 12px gray;
+    border-radius: 1rem;
+  }
+  .skills .container .skill-list .skill .progressBar .progress {
+    background: linear-gradient(to left, #e19406, #ffe100, #e17006);
+    height: 12px;
+  }
+  .skills .container hr {
+    background: #ffff;
+  }
+
+  .contact-Us .card .point-of-access {
+    width: 40%;
+    padding: 2rem;
+  }
+  .contact-Us .card .point-of-access ul {
+    width: 80%;
+  }
+  .contact-Us .card form {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .calculator .card {
+    width: 80vh;
+  }
+  .calculator .card .point-of-access {
+    width: 100%;
+    padding: 2rem;
+  }
+  .calculator .card form {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .skill-img {
+    display: none;
+  }
+
+  .calculator .card {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 760px) {
+  main {
+    margin-top: -20px;
+  }
+  main .hero-text img {
+    display: none;
+  }
+  main nav {
+    position: relative;
+  }
+  main nav .fa-bars {
+    color: #ffff;
+    font-size: 1rem;
+    margin-right: 0rem;
+  }
+  main nav .navbar {
+    position: fixed;
+    top: 0vh;
+    right: 0;
+    width: 200px;
+    background: #ffff;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    padding: 0.5rem;
+    height: 100vh;
+    z-index: 1;
+    transition: all 1s;
+    transform: translateX(100%);
+  }
+  main nav .navbar .fa-xmark {
+    position: relative;
+    color: #b40c71;
+    font-family: "Permanent Marker", cursive;
+    font-size: 30px;
+    border: 5px #b40c71 solid;
+    border-radius: 50%;
+    margin: 1rem auto;
+    padding: 10px;
+    cursor: pointer;
+    transition: 1s all;
+    width: 10rem !important;
+  }
+  main nav .navbar .fa-xmark:hover {
+    color: #fff;
+    background: #b40c71;
+    border: 5px #fff solid;
+
+  }
+  /* main nav .navbar :nth-child(2){
+    padding: 0.57rem;
+    margin-top: 7px;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    width: 80%;
+    height: 3rem;
+    transition: 1s all;
+  }
+  main nav .navbar :nth-child(3){
+    padding: 0.57rem;
+    margin-top: 7px;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 80%;
+    height: 3rem;
+    transition: 1s all;
+  }
+  main nav .navbar :nth-child(4){
+    padding: 0.57rem;
+    margin-top: 7px;
+    position: absolute;
+    top: 14rem;
+    left: 0;
+    width: 80%;
+    height: 3rem;
+    transition: 1s all;
+  }
+   */
+  main nav .navbar li a {
+    margin-left: 0.4rem;
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s;
+  }
+  main nav .navbar li .active {
+    color: black;
+    border-bottom: 2px solid black;
+  }
+  main nav .navbar li{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  main nav .navbar li .active a {
+    color: #fff;
+  }
+  main nav .navbar li .active::before {
+    width: 100%;
+  }
+  main nav .navbar li::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: black;
+    transition: 1s all;
+    z-index: -1;
+  }
+  main nav .navbar li:hover a {
+    color: #fff;
+  }
+  main nav .navbar li:hover::before {
+    width: 100%;
+  }
+
+  .contact-Us .card .row {
+    flex-direction: column;
+  }
+  .contact-Us .card .point-of-access {
+    width: 80%;
+    padding: 1rem;
+  }
+  .contact-Us .card .point-of-access ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .contact-Us .card form {
+    width: 100%;
+  }
+
+  .black nav .navbar {
+    background: black;
+  }
+  .black nav .navbar .fa-xmark {
+    color: #d4198a;
+    border: 5px #d4198a solid;
+  }
+  .black nav .navbar li a {
+    color: orange;
+  }
+  .black nav .navbar li .active {
+    color: yellow;
+    border-bottom: 2px solid orange;
+  }
+  .black nav .navbar li .active a {
+    color: #fff;
+  }
+  .black nav .navbar li .active::before {
+    width: 100%;
+  }
+  .black nav .navbar li::before {
+    background: orange;
+  }
+  .black nav .navbar li:hover a {
+    color: black;
+  }
+  .black nav .navbar li:hover::before {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .calculator .card {
+    width: 90vw;
+    font-size: 70%;
+  }
+  .calculator form {
+    width: 100%;
+  }
+  .calculator form .service-selection {
+    margin: 0.5rem auto;
+    width: 90%;
+  }
+  .calculator form .service-selection .type-of-project input {
+    font-size: 0.7rem;
+  }
+  .calculator form .service-selection .type-of-project label {
+    margin-left: 0.6rem;
+  }
+  .calculator .d-flex {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+  }
+  .calculator .d-flex input[type=range] {
+    width: 70%;
+    height: 4px;
+  }
+  .calculator .d-flex input[type=range]::-webkit-slider-thumb {
+    height: 4px;
+    width: 4px;
+  }
+  .calculator .d-flex input[type=checkbox] {
+    box-shadow: none;
+    width: 20px;
+    margin-right: 1rem;
+  }
+
+  main {
+    padding-bottom: 2rem;
+  }
+  main .hero-text {
+    align-items: center;
+  }
+  main .hero-text h1 {
+    margin-bottom: 1rem auto;
+    font-size: 2rem;
+    width: 300px;
+    text-align: center;
+  }
+  main .hero-text p {
+    font-family: "Roboto", sans-serif;
+    width: 300px;
+    text-align: center;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
+  }
+  main .hero-text button {
+    padding: 7px 3rem;
+    width: 190px;
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  .skills .skill-list {
+    width: 80%;
+  }
+
+  .services hr {
+    background: black;
+  }
+  .services .animate-surface {
+    perspective: 90vw;
+    margin: 1rem;
+  }
+  .services .card-body {
+    width: 15rem;
+    position: relative;
+  }
+  .services .card-body .card-front {
+    width: 15rem;
+  }
+  .services .card-body .card-front img {
+    width: 130px;
+    height: 130px;
+  }
+  .services .card-body .card-back {
+    width: 15rem;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+.black {
+  background: linear-gradient(45deg, black, #104ca0);
+}
+.black .services form, .black .contact-Us form, .black .calculator form {
+  background: linear-gradient(45deg, black, navy);
+  color: #fff;
+}
+.black .services .card-body, .black .services .card-front, .black .services .card-back, .black .contact-Us .card-body, .black .contact-Us .card-front, .black .contact-Us .card-back, .black .calculator .card-body, .black .calculator .card-front, .black .calculator .card-back {
+  background: linear-gradient(45deg, black, navy);
+}
+.black .services .card-body{
+  background: none;
+}
+.black .services .card-body h3, .black .services .card-body p, .black .services .card-front h3, .black .services .card-front p, .black .services .card-back h3, .black .services .card-back p, .black .contact-Us .card-body h3, .black .contact-Us .card-body p, .black .contact-Us .card-front h3, .black .contact-Us .card-front p, .black .contact-Us .card-back h3, .black .contact-Us .card-back p, .black .calculator .card-body h3, .black .calculator .card-body p, .black .calculator .card-front h3, .black .calculator .card-front p, .black .calculator .card-back h3, .black .calculator .card-back p {
+  color: #fff;
+}
+.black .services h1, .black .contact-Us h1, .black .calculator h1 {
+  color: #ffff;
+}
+.black .services hr, .black .contact-Us hr, .black .calculator hr {
+  background: #fff;
+}
+.black .services .team-members .card, .black .contact-Us .team-members .card, .black .calculator .team-members .card {
+  background: repeating-linear-gradient(45deg, black 20%, navy 50%);
+}
+.black .services .team-members .card h2, .black .services .team-members .card p, .black .contact-Us .team-members .card h2, .black .contact-Us .team-members .card p, .black .calculator .team-members .card h2, .black .calculator .team-members .card p {
+  color: #fff;
+}
